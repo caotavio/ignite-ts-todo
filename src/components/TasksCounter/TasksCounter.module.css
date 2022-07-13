@@ -1,0 +1,21 @@
+.taskListHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.createdCounter {
+  color: var(--blue-dark);
+}
+
+.completedCounter {
+  color: var(--green-light);
+}
+
+.taskListHeader span {
+  margin-left: 0.2rem;
+  padding: 0.1rem 0.5rem;
+  background-color: var(--gray-400);
+  color: var(--gray-200);
+  font-size: 0.6rem;
+  border-radius: 8px;
+}

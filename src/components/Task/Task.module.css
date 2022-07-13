@@ -1,0 +1,128 @@
+.taskWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+
+  background-color: var(--gray-500);
+}
+
+.taskContent {
+  display: flex;
+  align-items: center;
+}
+
+/* START Custom Checkbox */
+
+.customCheckbox {
+  margin-left: -1rem;
+  /* margin-top: -0.3rem; */
+  margin-right: 1.5rem;
+}
+
+.customCheckbox input[type="checkbox"] {
+  opacity: 0;
+}
+
+/* OUTERBOX design */
+.customCheckbox label::before {
+  content: "";
+  display: inline-block;
+  
+  height: 14px;
+  width: 14px;
+  
+  border: 1px solid var(--blue-dark);
+  border-radius: 50%;
+}
+
+/* CHECKMARK design */
+.customCheckbox label::after {
+  content: "";
+  display: inline-block;
+  
+  height: 5px;
+  width: 8px;
+  border-left: 1px solid var(--gray-100);
+  border-bottom: 1px solid var(--gray-100);
+  
+  transform: rotate(-45deg);
+  transition: opacity 0.2s ease-in-out;
+}
+
+.customCheckbox label {
+  position: relative;
+}
+
+.customCheckbox label::before,
+.customCheckbox label::after {
+  position: absolute;
+}
+
+/*Outer-box*/
+.customCheckbox label::before {
+  top: 1px;
+}
+
+/*Checkmark*/
+.customCheckbox label::after {
+  left: 3.5px;
+  top: 5px;
+}
+
+/*Hide the checkmark by default*/
+.customCheckbox input[type="checkbox"] + label::after {
+  content: none;
+}
+
+/*Show the checkmark on the checked state*/
+.customCheckbox input[type="checkbox"]:checked + label::after {
+  content: "";
+}
+
+.customCheckbox input[type="checkbox"]:checked + label::before {
+  border-color: var(--green-light);
+  background-color: var(--green-light);
+}
+
+/*Adding focus styles on the outer-box of the fake checkbox*/
+.customCheckbox input[type="checkbox"]:focus + label::before {
+  outline: var(--blue-dark) auto 1px;
+}
+
+/* END Custom Checkbox */
+
+/* .taskContent input {
+  margin-right: 0.75rem;
+  border-radius: 50%;
+} */
+
+.deleteButton {
+  padding: 0.2rem;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  background: none;
+  cursor: pointer;
+  line-height: 0;
+
+  transition: color 0.2s;
+}
+
+.deleteButton:hover {
+  color: var(--red-500);
+}
+
+.taskContent p {
+  font-size: 0.8rem;
+  color: var(--gray-200);
+}
+
+.test {
+  color: var(--gray-300)!important;
+  text-decoration: line-through;
+}

@@ -1,0 +1,66 @@
+.mainWrapper {
+  max-width: 1120px;
+  margin: -1.4rem auto;
+  padding: 0 1rem;
+}
+
+.taskInput {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 9fr 1fr;
+}
+
+.taskInput input {
+  padding: 0 1rem;
+  border-radius: 8px;
+  border: 0;
+  font-size: 0.8rem;
+
+  border: 1px solid var(--gray-600);
+  background-color: var(--gray-500);
+  color: var(--gray-200);
+}
+
+.taskInput button[disabled] {
+  cursor: not-allowed;
+}
+
+.taskInput button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.75rem 1rem;
+
+  font-size: 0.8rem;
+  background-color: var(--green-dark);
+  color: var(--gray-100);
+  border-radius: 8px;
+  border: 0;
+  cursor: pointer;
+
+  transition: background-color 0.2s;
+}
+
+.taskInput button[disabled]:hover {
+  background-color: var(--green-dark);
+}
+
+.taskInput button:hover {
+  background-color: var(--green-light);
+}
+
+.taskListWrapper {
+  margin-top: 4rem;
+}
+
+.taskListWrapper strong {
+  font-size: 0.8rem;
+}
+
+.taskList {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
